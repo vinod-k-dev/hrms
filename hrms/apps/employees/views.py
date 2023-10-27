@@ -39,6 +39,7 @@ class KycDetailView(LoginRequiredMixin, CreateView):
 
 
 class KycDetailListView(LoginRequiredMixin, ListView):
+    # Here we used SQL query
     queryset = KycDetail.objects.raw("SELECT * FROM employees_kycdetail")
     model = KycDetail
     template_name = "employees/document_list.html"
@@ -55,6 +56,7 @@ class KycDetailListView(LoginRequiredMixin, ListView):
         else:
             """If user is agent then return only our documents"""
             employee_id = self.request.user.employee_profile.id
+            # Here we used SQL query
             self.queryset = self.model.objects.raw(
                 "SELECT * FROM employees_kycdetail WHERE employee_id = %s",
                 [employee_id],
