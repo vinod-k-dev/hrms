@@ -18,7 +18,7 @@ Clone the project from Github:
 ## Virtual Environment Setup
 Create Virtualenv Folder
 
-    virtualenv --python=python3.8 Project_dir/.venv
+    virtualenv --python=python3.11 Project_dir/.venv
 
 
 Activate Environment:
