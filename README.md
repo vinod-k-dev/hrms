@@ -1,6 +1,6 @@
 # HRMS
 
-The objective of this assignment is to develop an HR management Software for our self. A typical workflow for our self.
+The objective of this assignment is to develop an HR management Software for yourself.
 
 ## Clone the project
 Clone the project from Github:
