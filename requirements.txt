@@ -1,0 +1,8 @@
+Django
+django-widget_tweaks==1.4.8
+python-decouple
+Unipath
+django-money==3.3.0
+djangorestframework
+drf-yasg
+django-filter

@@ -1,0 +1,14 @@
+*.pyc
+local_settings.py
+local.py
+# */media/
+# **/migrations/
+*/staticfiles/
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+.idea
+.vscode

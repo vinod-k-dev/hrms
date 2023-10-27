@@ -1,0 +1,55 @@
+{% extends '../layout.html' %}
+{% load i18n static widget_tweaks%}
+
+{% block title %}Documents{% endblock %}
+
+{% block content %}
+    <section >
+        <div class="container margintop">
+            {% if request.user.is_employee %}
+                
+                <div class="row">
+                    <div class="col">
+                        <button><a href="{% url 'employees:create_emp_kyc' %}"> Add Kyc Document </a></button>
+                    </div>
+                </div>
+            {% endif %}
+            <table id="inviceTable" class="table table-bordered table-fix" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Document</th>
+                        <th>Document Type</th>
+                        <th></th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for document in object_list %}
+                        <tr>
+                            <td>{{document.document}}</td>
+                            <td>{{document.document_type}}</td>
+                            <td><a href="{{document.document.url}}" target="blank">View document</a></td>
+                            <td>
+                                <a href="#">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        
+    </section>
+{% endblock %}
+
+{% block js %}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#inviceTable').DataTable({
+                
+            });
+        });
+    </script>
+    
+{% endblock js %}

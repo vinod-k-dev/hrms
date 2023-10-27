@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% load i18n static widget_tweaks%}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <button type="button" class="btn btn-dark"> <a href="{% url 'employees:kyc_document_list' %}">Check Documents</span></a></button>
+    </div>
+{% endblock %}
